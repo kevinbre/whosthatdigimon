@@ -13,7 +13,7 @@ export function Home () {
     // const [lose, setLose] = useState(false)
 
     async function DigimonRandom() { 
-        const max = 6
+        const max = 14
         const min = 1
         const num = Math.floor(Math.random() * (max - min + min) + min)  
         setRandomDigimon(num)
