@@ -21,6 +21,7 @@ export function Home () {
         setBest(getBest)
         }
 
+
     function whoIsThatDigimon() {
           digimons.map((digimon) => {
             if(digimon.id === randomDigimon) {
