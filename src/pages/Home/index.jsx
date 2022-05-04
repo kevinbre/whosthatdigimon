@@ -122,11 +122,20 @@ export function Home () {
                 <h1> El digimon era {digimonName.name} </h1> : null}
                 <label className="digimon__name">Nombre del Digimon</label>
                 {lose ? 
-                <input type="text" name="digimon_name" value={digimonSearch} onChange={e => {setDigimonSearch(e.target.value);} } disabled></input> 
+                <input type="text" name="digimon_name" value={digimonSearch} onChange={e => {setDigimonSearch(e.target.value);} } disabled></input>
+                
                 : 
                 <input type="text" name="digimon_name" value={digimonSearch} onChange={e => {setDigimonSearch(e.target.value);} }></input>
                 }
-                <label className="digimon__next" onClick={nextDigimon}>Buscar otro Digimon</label>       
+                {lose ? 
+                <label className="digimon__next--disabled">Buscar otro Digimon</label>  
+                
+                : 
+                <label className="digimon__next" onClick={nextDigimon}>Buscar otro Digimon</label>  
+                }
+
+                
+                     
             </div>
             </div>
             </div>

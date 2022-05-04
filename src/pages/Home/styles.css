@@ -13,7 +13,7 @@
   font-weight: 900;
 
   -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .digimon__title img {
@@ -48,7 +48,6 @@
 
 .digimon__cards--false img {
   max-width: 250px;
-
   filter: brightness(0%) drop-shadow(0 2px 5px rgba(255, 240, 31, .2));
 }
 
@@ -62,12 +61,22 @@
 
 .digimon__next:hover {
   background-color: #FFE249;
+  cursor: pointer;
+}
+
+.digimon__next--disabled {
+  cursor: none;
+  margin-top: 20px;
+  padding: 10px 5px;
+
+  border-radius: 4px;
+  background-color: #F6AC47;
 }
 
 .digimon__cards--true img {
   max-width: 250px;
-
   filter: brightness(100%);
+  animation: 1s digimonTransitionIn;
 }
 
 .digimon__cards h1 {
@@ -163,7 +172,25 @@
   content: ' ';
 }
 
+@keyframes digimonTransitionIn{
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes digimonTransitionOut{
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
 
 
 
