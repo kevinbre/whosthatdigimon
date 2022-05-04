@@ -10,7 +10,7 @@ export function Home () {
     const [timer, setTimer] = useState(3)
     const [score, setScore] = useState(0)
     const [best, setBest] = useState()
-    const [lose, setLose] = useState(false)
+    // const [lose, setLose] = useState(false)
 
     async function DigimonRandom() { 
         const max = 6
@@ -34,17 +34,17 @@ export function Home () {
         DigimonRandom()
         whoIsThatDigimon()
         setScore(0)
-        digimonLose()
+        // digimonLose()
     }
 
-    function digimonLose() {
-        setLose(true)
-        setDigimonCheck(true)
-            setTimeout(() => {
-                setLose(false)
-                setDigimonCheck(false)
-            }, [3000])
-    }
+    // function digimonLose() {
+    //     setLose(true)
+    //     setDigimonCheck(true)
+    //         setTimeout(() => {
+    //             setLose(false)
+    //             setDigimonCheck(false)
+    //         }, [3000])
+    // }
 
     useEffect(() => {
         if (digimonCheck === true) {
@@ -59,7 +59,7 @@ export function Home () {
     
 
     useEffect(() => {
-        if(digimonCheck === true && lose === false) {
+        if(digimonCheck === true) {
             const streak = score + 1
             setScore(streak)
             if (streak > best){
@@ -102,7 +102,7 @@ export function Home () {
                 </div>
                 <div className="col-md-12">
             <div className="digimon__input justify-content-center align-items-center">
-                {digimonCheck && !lose ? 
+                {digimonCheck ? 
                 <h2 className="digimon__correcto">Correcto! Proximo Digimon en {timer}</h2>
                 : 
                 <h2 className="digimon__incorrect"></h2>
