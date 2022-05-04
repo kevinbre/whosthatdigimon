@@ -73,13 +73,13 @@ export function Home () {
             DigimonRandom()
             whoIsThatDigimon()
         }
-    },[digimonCheck])
+    },[digimonCheck]) // eslint-disable-line
 
     useEffect(() => {
         if (digimonSearch === digimonName.name) {
             setDigimonCheck(true)
         }
-    },[digimonSearch]) 
+    },[digimonSearch]) // eslint-disable-line
  
     return (
         <div className="container digimon__container">
@@ -105,7 +105,7 @@ export function Home () {
                 {digimonCheck ? 
                 <h2 className="digimon__correcto">Correcto! Proximo Digimon en {timer}</h2>
                 : 
-                <h2 className="digimon__incorrect"></h2>
+                <h2 className="digimon__incorrect"></h2> // eslint-disable-line
                 }
                 
                 <label className="digimon__name">Nombe del Digimon</label>
