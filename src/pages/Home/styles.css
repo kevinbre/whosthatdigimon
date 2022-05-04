@@ -1,0 +1,136 @@
+.digimon__title {
+  position: absolute;
+  top: 20px;
+  text-transform: uppercase;
+  font-family: 'Digimon Basic';
+}
+
+.digimon__title h1{
+  font-size: 3rem;
+  font-weight: 900;
+  background: -webkit-linear-gradient(-90deg, #ffe379 , #ee7d1c);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.digimon__container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0 ,.9);
+  height: 100%;
+}
+
+.digimon__background {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  vertical-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.digimon__cards--false img {
+  max-width: 250px;
+  filter: brightness(0%);
+}
+
+.digimon__cards--true img {
+  max-width: 250px;
+  filter: brightness(100%);
+}
+
+.digimon__cards h1 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.digimon__input {
+  color: #ee7d1c;
+  text-align: center;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-family: 'Digimon Basic';
+  font-size: 1.5rem;
+}
+
+.digimon__input input {
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+}
+
+.digimon__next {
+  font-size: 18px;
+  color: white;
+}
+
+.digimon__puntuacion {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 4px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.digimon__puntuacion h1 {
+ font-weight: bold;
+ font-family: 'Digimon Basic';
+}
+
+.digimon__puntuacion--current h1 {
+  font-weight: bold;
+  font-family: 'Digimon Basic';
+}
+
+.digimon__puntuacion--current label {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Digimon Basic';
+}
+
+.digimon__puntuacion label {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Digimon Basic';
+}
+
+.digimon__puntuacion--current {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.digimon__incorrect {
+  content: " "
+}
+
+
+
+
+

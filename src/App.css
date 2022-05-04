@@ -1,0 +1,19 @@
+body {
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  background-attachment: scroll;
+}
+
+@font-face {
+  font-family: 'Digimon Basic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Digimon Basic'), url('./DigimonBasic.woff') format('woff');
+  }
+
+.App {
+  height: 100vh;
+}
