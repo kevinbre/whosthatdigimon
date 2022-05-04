@@ -1,16 +1,23 @@
 .digimon__title {
   position: absolute;
   top: 20px;
-  text-transform: uppercase;
+
   font-family: 'Digimon Basic';
+  text-transform: uppercase;
 }
 
-.digimon__title h1{
+.digimon__title h1 {
+  background: -webkit-linear-gradient(-90deg, #FFE379 , #EE7D1C);
+
   font-size: 3rem;
   font-weight: 900;
-  background: -webkit-linear-gradient(-90deg, #ffe379 , #ee7d1c);
+
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+.digimon__title img {
+  max-width: 120px;
 }
 
 .digimon__container {
@@ -20,30 +27,46 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  border-radius: 20px;
 
-  background: rgba(0, 0, 0 ,.9);
   height: 100%;
+
+  border-radius: 20px;
+  background: rgba(0, 0, 0 ,.9);
 }
 
 .digimon__background {
+  display: flex;
+  justify-content: center;
+
   width: 100%;
   height: 100%;
   padding-top: 100px;
-  vertical-align: center;
+
   text-align: center;
-  display: flex;
-  justify-content: center;
+  vertical-align: center;
 }
 
 .digimon__cards--false img {
   max-width: 250px;
-  filter: brightness(0%) drop-shadow(0 2px 5px rgba(255, 240, 31, 0.2));
-  
+
+  filter: brightness(0%) drop-shadow(0 2px 5px rgba(255, 240, 31, .2));
+}
+
+.digimon__next {
+  margin-top: 20px;
+  padding: 10px 5px;
+
+  border-radius: 4px;
+  background-color: #F6AC47;
+}
+
+.digimon__next:hover {
+  background-color: #FFE249;
 }
 
 .digimon__cards--true img {
   max-width: 250px;
+
   filter: brightness(100%);
 }
 
@@ -55,80 +78,89 @@
 }
 
 .digimon__input {
-  color: #ee7d1c;
-  text-align: center;
-  justify-content: end;
-  align-items: center;
   display: flex;
-  height: 100%;
+  align-items: center;
   flex-direction: column;
+  justify-content: end;
+
+  height: 100%;
+
+  color: #EE7D1C;
   font-family: 'Digimon Basic';
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .digimon__input input {
-  text-align: center;
   border: none;
   border-radius: 15px;
+
+  text-align: center;
 }
 
 .digimon__next {
-  font-size: 18px;
   color: white;
+  font-size: 18px;
 }
 
 .digimon__puntuacion {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  border-radius: 4px;
-  margin: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+
+  border-radius: 4px;
+  background-color: white;
+
+  color: black;
+  text-align: center;
 }
 
 .digimon__puntuacion h1 {
- font-weight: bold;
- font-family: 'Digimon Basic';
+  font-family: 'Digimon Basic';
+  font-weight: bold;
 }
 
 .digimon__puntuacion--current h1 {
-  font-weight: bold;
   font-family: 'Digimon Basic';
+  font-weight: bold;
 }
 
 .digimon__puntuacion--current label {
+  font-family: 'Digimon Basic';
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Digimon Basic';
 }
 
 .digimon__puntuacion label {
+  font-family: 'Digimon Basic';
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Digimon Basic';
 }
 
 .digimon__puntuacion--current {
-  width: 100px;
-  height: 100px;
-  background-color: white;
-  border-radius: 4px;
-  color: black;
-  margin: 20px;
-  text-align: center;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+
+  border-radius: 4px;
+  background-color: white;
+
+  color: black;
+  text-align: center;
 }
 
 .digimon__incorrect {
-  content: " "
+  content: ' ';
 }
 
 

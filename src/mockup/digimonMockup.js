@@ -42,7 +42,7 @@ export const digimons = [
     },
     {
         id: 6,
-        name: "eruno",
+        name: "erumon",
         image: eruno
     },
     {
@@ -52,7 +52,7 @@ export const digimons = [
     },
     {
         id: 8,
-        name: "biyomon",
+        name: "piyomon",
         image: biyomon
     },
     {
@@ -72,7 +72,7 @@ export const digimons = [
     },
     {
         id: 12,
-        name: "patamon",
+        name: "gatamon",
         image: patamon
     },
     {

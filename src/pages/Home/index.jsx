@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { digimons } from '../../mockup/digimonMockup'
+import LogoDigimon from '../../images/logo.png'
 import './styles.css'
 
 export function Home () {
@@ -10,15 +11,21 @@ export function Home () {
     const [timer, setTimer] = useState(3)
     const [score, setScore] = useState(0)
     const [best, setBest] = useState()
-    // const [lose, setLose] = useState(false)
+    const [lose, setLose] = useState(false)
 
     async function DigimonRandom() { 
         const max = 14
         const min = 1
-        const num = Math.floor(Math.random() * (max - min + min) + min)  
-        setRandomDigimon(num)
+        const num = Math.floor(Math.random() * (max - min + min) + min)
+        if (randomDigimon === num) {
+            DigimonRandom()
+        } else {
+            setRandomDigimon(num)
+        }
+      
         const getBest = window.localStorage.getItem('Racha');
         setBest(getBest)
+
         }
 
 
@@ -33,19 +40,20 @@ export function Home () {
 
     function nextDigimon() {
         DigimonRandom()
-        whoIsThatDigimon()
+        setTimeout(() => {
+            whoIsThatDigimon()
+            setLose(false)
+        }, [3000])
         setScore(0)
-        // digimonLose()
+        digimonLose()
     }
 
-    // function digimonLose() {
-    //     setLose(true)
-    //     setDigimonCheck(true)
-    //         setTimeout(() => {
-    //             setLose(false)
-    //             setDigimonCheck(false)
-    //         }, [3000])
-    // }
+    function digimonLose() {
+        setLose(true)
+            setTimeout(() => {
+                setLose(false)
+            }, [4000])
+    }
 
     useEffect(() => {
         if (digimonCheck === true) {
@@ -69,7 +77,7 @@ export function Home () {
             setTimeout(() => {
                 setDigimonCheck(false)
                 setDigimonSearch('')
-            }, [3000])
+            }, [3900])
         } else {
             DigimonRandom()
             whoIsThatDigimon()
@@ -85,7 +93,7 @@ export function Home () {
     return (
         <div className="container digimon__container">
             <div className="row digimon__title text-center w-100">
-                <h1>Who's that Digimon?</h1>
+                <h1>Who's that <img src={LogoDigimon} alt="logo" />?</h1>
             </div>
             <div className="row">
                 <div className="col-md-12">
@@ -93,12 +101,13 @@ export function Home () {
                 {digimonCheck ?
                     <div className="digimon__cards--true">
                         <img src={digimonName.image} alt={digimonName.name} />
-                    </div> 
+                    </div>
                 : 
                     <div className="digimon__cards--false">
                         <img src={digimonName.image} alt={digimonName.name} />
                     </div> 
                 }
+
                 </div>
                 </div>
                 <div className="col-md-12">
@@ -108,9 +117,15 @@ export function Home () {
                 : 
                 <h2 className="digimon__incorrect"></h2> // eslint-disable-line
                 }
-                
-                <label className="digimon__name">Nombe del Digimon</label>
+
+                {lose ? 
+                <h1> El digimon era {digimonName.name} </h1> : null}
+                <label className="digimon__name">Nombre del Digimon</label>
+                {lose ? 
+                <input type="text" name="digimon_name" value={digimonSearch} onChange={e => {setDigimonSearch(e.target.value);} } disabled></input> 
+                : 
                 <input type="text" name="digimon_name" value={digimonSearch} onChange={e => {setDigimonSearch(e.target.value);} }></input>
+                }
                 <label className="digimon__next" onClick={nextDigimon}>Buscar otro Digimon</label>       
             </div>
             </div>
