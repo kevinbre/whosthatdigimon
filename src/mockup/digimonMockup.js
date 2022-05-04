@@ -6,7 +6,7 @@ import wargreymon from "../images/wargreymon.png"
 import eruno from "../images/eruno.png"
 import agumon from "../images/agumon.png"
 import biyomon from "../images/biyomon.png"
-import ganumon from "../images/ganumon.png"
+import gabumon from "../images/gabumon.png"
 import gatomon from "../images/gatomon.png"
 import palmon from "../images/palmon.png"
 import patamon from "../images/patamon.png"
@@ -57,8 +57,8 @@ export const digimons = [
     },
     {
         id: 9,
-        name: "ganumon",
-        image: ganumon
+        name: "gabumon",
+        image: gabumon
     },
     {
         id: 10,
