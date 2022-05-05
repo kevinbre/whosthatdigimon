@@ -12,6 +12,7 @@ import palmon from "../images/palmon.png"
 import patamon from "../images/patamon.png"
 import togemon from "../images/togemon.png"
 import tunomon from "../images/tunomon.png"
+import alexconungatomon from "../images/alexmon.png"
 
 
 export const digimons = [
@@ -84,6 +85,11 @@ export const digimons = [
         id: 14,
         name: "tunomon",
         image: tunomon
-    }    
+    },
+    {
+        id: 15,
+        name: "alexconungatomon",
+        image: alexconungatomon
+    } 
 ]
 

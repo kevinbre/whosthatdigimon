@@ -13,8 +13,8 @@ export function Home () {
     const [best, setBest] = useState()
     const [lose, setLose] = useState(false)
 
-    async function DigimonRandom() { 
-        const max = 14
+    function DigimonRandom() { 
+        const max = 15
         const min = 1
         const num = Math.floor(Math.random() * (max - min + min) + min)
         if (randomDigimon === num) {
@@ -25,8 +25,7 @@ export function Home () {
       
         const getBest = window.localStorage.getItem('Racha');
         setBest(getBest)
-
-        }
+    }
 
 
     function whoIsThatDigimon() {
@@ -52,7 +51,7 @@ export function Home () {
         setLose(true)
             setTimeout(() => {
                 setLose(false)
-            }, [4000])
+            }, [3000])
     }
 
     useEffect(() => {
@@ -77,7 +76,7 @@ export function Home () {
             setTimeout(() => {
                 setDigimonCheck(false)
                 setDigimonSearch('')
-            }, [3900])
+            }, [3000])
         } else {
             DigimonRandom()
             whoIsThatDigimon()
@@ -107,7 +106,6 @@ export function Home () {
                         <img src={digimonName.image} alt={digimonName.name} />
                     </div> 
                 }
-
                 </div>
                 </div>
                 <div className="col-md-12">
@@ -133,25 +131,23 @@ export function Home () {
                 : 
                 <label className="digimon__next" onClick={nextDigimon}>Buscar otro Digimon</label>  
                 }
-
-                
-                     
+        
             </div>
             </div>
             </div>
-            <div className="row">
-            <div className="col-6">
-            <div className="digimon__puntuacion">
-                <h1>{score}</h1>
-                <label>Current</label>
-            </div>
-            </div>
-            <div className="col-6">
-            <div className="digimon__puntuacion--current">
-                <h1>{best}</h1>
-                <label>Best</label>
-            </div>
-            </div>
+                <div className="row">
+                    <div className="col-6">
+                        <div className="digimon__puntuacion">
+                            <h1>{score}</h1>
+                            <label>Current</label>
+                        </div>
+                </div>
+                <div className="col-6">
+                    <div className="digimon__puntuacion--current">
+                        <h1>{best}</h1>
+                        <label>Best</label>
+                    </div>
+                </div>
             </div>
         </div>
     )
